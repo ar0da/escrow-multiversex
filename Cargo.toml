@@ -1,0 +1,28 @@
+[package]
+name = "escrow-sc"
+version = "0.0.0"
+publish = false
+edition = "2021"
+authors = ["you"]
+
+[lib]
+path = "src/escrow_sc.rs"
+
+[dependencies.multiversx-sc]
+version = "0.56.1"
+
+[dev-dependencies]
+num-bigint = "0.4"
+
+[dev-dependencies.multiversx-sc-scenario]
+version = "0.56.1"
+
+[workspace]
+members = [
+    ".",
+    "meta",
+]
+
+# Added to handle potential path and encoding issues
+[build]
+rustflags = ["-C", "target-feature=+crt-static"]

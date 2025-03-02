@@ -1,0 +1,12 @@
+[build]
+# Enable long path support
+target-dir = "target"
+
+[target.wasm32-unknown-unknown]
+rustflags = [
+    "-C", "target-feature=+crt-static",
+    "-C", "link-arg=-Wl,--stack-first",
+    "-C", "link-arg=-Wl,--no-entry",
+    "-C", "link-arg=-Wl,--export-dynamic",
+    "-C", "link-arg=-Wl,--gc-sections",
+]

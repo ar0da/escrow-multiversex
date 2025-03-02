@@ -1,0 +1,20 @@
+# Rust
+/target
+**/*.rs.bk
+*.pdb
+
+# MultiversX
+/output
+*.wasm
+*.abi.json
+
+# Cargo
+Cargo.lock
+
+# IDE
+.vscode/
+.idea/
+
+# Misc
+.DS_Store
+*.log
